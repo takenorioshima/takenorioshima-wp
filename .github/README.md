@@ -1,0 +1,17 @@
+# WordPress theme for takenorioshima.org
+
+Website: [takenorioshima.org](https://www.takenorioshima.org)
+
+Based On: [github.com/takenorioshima/understrap-child](https://github.com/takenorioshima/understrap-child)
+Parent Theme: [github.com/understrap/understrap](https://github.com/understrap/understrap)
+
+## License
+
+GNU GPL version 3
+
+## Credits
+
+- Understrap by Howard Development & Consulting, LLC. : https://github.com/understrap/understrap-child (GNU GPLv2)
+- Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (MIT)
+- Bootstrap Icons: https://github.com/twbs/icons (MIT)
+- WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/wp-bootstrap/wp-bootstrap-navwalker (GNU GPLv3)
