@@ -1,1 +1,25 @@
 // Add your styles here.
+
+/* Support 100vh for mobile */
+html,
+body {
+  min-height: 100vh;
+  min-height: fill-available;
+}
+
+.hero-unit {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: fill-available;
+}
+
+.admin-bar .hero-unit {
+  height: calc(100vh - 32px);
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
