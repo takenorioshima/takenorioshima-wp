@@ -18837,17 +18837,11 @@ body {
   min-height: fill-available;
 }
 
-.hero-unit {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: fill-available;
-}
-
-.admin-bar .hero-unit {
-  height: calc(100vh - 32px);
+#page {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: fill-available;
 }
 
 .site-footer {
@@ -18856,6 +18850,27 @@ body {
   width: 100vw;
 }
 
+.hero-unit {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: fill-available;
+}
+@media (min-width: 768px) {
+  .hero-unit {
+    height: 100vh;
+  }
+}
+.hero-unit #main-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
 .hero-unit::before {
   position: absolute;
   z-index: -1;
@@ -18865,13 +18880,9 @@ body {
   content: "";
   background: rgba(255, 180, 180, 0.3);
 }
-.hero-unit #main-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  width: 100%;
-  height: 100%;
+
+.admin-bar .hero-unit {
+  height: calc(100vh - 32px);
 }
 
 /*# sourceMappingURL=main.css.map*/

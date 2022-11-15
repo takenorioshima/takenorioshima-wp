@@ -7,15 +7,9 @@ body {
   min-height: fill-available;
 }
 
-.hero-unit {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  height: fill-available;
-}
-
-.admin-bar .hero-unit {
-  height: calc(100vh - 32px);
+#page {
+  min-height: 100vh;
+  min-height: fill-available;
 }
 
 .site-footer {
