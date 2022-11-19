@@ -5,12 +5,27 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "scripts": {},
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "build": "run-s build:**",
+    "build:js": "esbuild src/js/main.js --outdir=js --bundle --minify",
+    "build:sass": "sass src/sass/index.scss:css/main.css --load-path=node_modules",
+    "build:postcss": "postcss --use autoprefixer --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
+    "build:admin:sass": "sass src/sass/admin.scss:css/admin.css src/sass/editor.scss:css/editor.css --load-path=node_modules"
+  },
   "devDependencies": {
     "@popperjs/core": "^2.11.6",
+    "autoprefixer": "^10.4.13",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.10.2",
+    "clean-css": "^5.3.1",
     "esbuild": "^0.15.14",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.56.1",
     "stylelint": "^14.14.1",
     "stylelint-config-twbs-bootstrap": "^7.0.0"
   }
