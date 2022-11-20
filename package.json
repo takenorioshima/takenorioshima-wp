@@ -5,27 +5,30 @@
   "engines": {
     "node": ">=16.0.0"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development",
-    "watch": "webpack --mode development --watch"
+    "build": "run-p build:*",
+    "build:js": "esbuild src/js/main.js --outdir=js --bundle --minify",
+    "build:css": "run-s css:*",
+    "css:compile": "sass src/sass/index.scss:css/main.css src/sass/admin.scss:css/admin.css src/sass/editor.scss:css/editor.css --load-path=node_modules --style=compressed",
+    "css:postcss": "postcss --use autoprefixer --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
+    "watch": "nodemon --watch src --ext scss,js --exec \"run-s build:*\""
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.6",
     "autoprefixer": "^10.4.13",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.10.2",
-    "css-loader": "^6.7.1",
-    "mini-css-extract-plugin": "^2.6.1",
+    "clean-css": "^5.3.1",
+    "esbuild": "^0.15.14",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.19",
-    "postcss-loader": "^7.0.1",
+    "postcss-cli": "^10.0.0",
     "sass": "^1.56.1",
-    "sass-loader": "^13.2.0",
-    "style-loader": "^3.3.1",
     "stylelint": "^14.14.1",
-    "stylelint-config-twbs-bootstrap": "^7.0.0",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-remove-empty-scripts": "^1.0.1"
+    "stylelint-config-twbs-bootstrap": "^7.0.0"
   }
 }

@@ -4,17 +4,17 @@
 @import "variables";
 
 // Grab a few bootstrap assets so we can use mixins, variables, etc
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/maps";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/root";
-@import "~bootstrap/scss/tables";
-@import "~bootstrap/scss/images";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/images";
 
 // Set up basic typography
-@import "~bootstrap/scss/type";
+@import "bootstrap/scss/type";
 
 // Fixes Gutenberg's cover block color picker.
 /* stylelint-disable-next-line selector-class-pattern */
