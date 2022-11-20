@@ -9,11 +9,12 @@
     "defaults"
   ],
   "scripts": {
-    "build": "run-s build:**",
+    "build": "run-p build:*",
     "build:js": "esbuild src/js/main.js --outdir=js --bundle --minify",
-    "build:sass": "sass src/sass/index.scss:css/main.css --load-path=node_modules",
-    "build:postcss": "postcss --use autoprefixer --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
-    "build:admin:sass": "sass src/sass/admin.scss:css/admin.css src/sass/editor.scss:css/editor.css --load-path=node_modules"
+    "build:css": "run-s css:*",
+    "css:compile": "sass src/sass/index.scss:css/main.css src/sass/admin.scss:css/admin.css src/sass/editor.scss:css/editor.css --load-path=node_modules --style=compressed",
+    "css:postcss": "postcss --use autoprefixer --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
+    "watch": "nodemon --watch src --ext scss,js --exec \"run-s build:*\""
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.6",
@@ -22,6 +23,7 @@
     "bootstrap-icons": "^1.10.2",
     "clean-css": "^5.3.1",
     "esbuild": "^0.15.14",
+    "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.19",
     "postcss-cli": "^10.0.0",
