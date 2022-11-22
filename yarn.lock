@@ -1979,6 +1979,11 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+tocbot@^4.19.0:
+  version "4.19.0"
+  resolved "https://registry.yarnpkg.com/tocbot/-/tocbot-4.19.0.tgz#8b7433d63be9f52f8e9823641813bc1db7329df4"
+  integrity sha512-sI/+XAh+Byn/zRSlmJnTJW37iqpRZc2RugnHCbQh4dBGOM3MYAlg2X7iXaWI9vrUhesC+SkPYerIP7nhs1X+4A==
+
 touch@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/touch/-/touch-3.1.0.tgz#fe365f5f75ec9ed4e56825e0bb76d24ab74af83b"

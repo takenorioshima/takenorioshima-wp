@@ -1,4 +1,5 @@
 import "bootstrap";
+import * as tocbot from "tocbot";
 
 // Add your custom JS here.
 document.addEventListener("DOMContentLoaded", () => {});
@@ -11,4 +12,23 @@ window.addEventListener("scroll", function () {
   } else {
     mainNav.classList.remove("is-scrolled");
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const h2s = document.querySelectorAll(".entry-content h2");
+  const h3s = document.querySelectorAll(".entry-content h3");
+  h2s.forEach((heading, index) => {
+    heading.setAttribute("id", "h2-" + index);
+  });
+  h3s.forEach((heading, index) => {
+    heading.setAttribute("id", "h3-" + index);
+  });
+  tocbot.init({
+    tocSelector: ".js-toc",
+    contentSelector: ".entry-content",
+    eadingSelector: "h2, h3",
+    headingsOffset: 70,
+    scrollSmoothOffset: -70,
+    scrollSmoothDuration: 100,
+  });
 });
