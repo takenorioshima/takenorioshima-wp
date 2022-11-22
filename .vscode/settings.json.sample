@@ -1,9 +1,22 @@
 {
-  "phpcs.standard": "./phpcs.xml",
-  "phpcbf.standard": "./phpcs.xml",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "scss.validate": false,
   "css.validate": false,
   "stylelint.snippet": ["css", "less", "postcss", "scss"],
   "stylelint.validate": ["css", "less", "postcss", "scss"],
-  "editor.codeActionsOnSave": { "source.fixAll.stylelint": true }
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+  "phpsab.standard": "WordPress",
+  "phpsab.executablePathCS": "vendor/bin/phpcs",
+  "phpsab.executablePathCBF": "vendor/bin/phpcbf",
+  "editor.formatOnSave": true,
+  "intelephense.stubs": ["Core", "date", "mbstring", "standard", "wordpress"],
+  "[php]": {
+    "editor.defaultFormatter": "valeryanm.vscode-phpsab"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "intelephense.environment.shortOpenTag": false
 }
