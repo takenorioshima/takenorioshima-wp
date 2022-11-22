@@ -1,0 +1,68 @@
+.sidebar-sticky {
+  position: sticky;
+  top: calc($global-header-height + 1.5rem);
+}
+
+.toc-list {
+  position: relative;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  list-style: none;
+}
+
+.toc-list::before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  width: 2px;
+  content: "";
+  background: #fdd;
+}
+
+.toc-list .toc-list-item {
+  position: relative;
+  padding-left: 2rem;
+  margin: 0.5rem 0;
+  line-height: 1.3;
+}
+
+.toc-list .toc-list-item .toc-list-item {
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.toc-list .toc-list-item::before {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  content: "";
+  background: #f99;
+  border-radius: 50rem;
+}
+
+.toc-list.is-collapsible .toc-list-item::before {
+  display: none;
+}
+
+.toc-link {
+  color: var(--bs-body-color);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: 0.2s;
+  &:hover {
+    color: var(--bs-body-color);
+    opacity: 1;
+  }
+}
+
+.toc-list .toc-list-item .toc-list-item .toc-link {
+  font-weight: 400;
+}
+
+.toc-list .is-active-li .toc-link {
+  opacity: 1;
+}

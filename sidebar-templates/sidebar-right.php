@@ -44,8 +44,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	</div>
 </div>
 
-<div class="sidebar-toc js-toc"></div>
-
-<?php dynamic_sidebar( 'right-sidebar' ); ?>
+<div class="sidebar-sticky">
+	<div class="sidebar-toc js-toc"></div>
+	<?php dynamic_sidebar( 'right-sidebar' ); ?>
+</div>
 
 </div><!-- #right-sidebar -->

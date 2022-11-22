@@ -31,4 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollSmoothOffset: -70,
     scrollSmoothDuration: 100,
   });
+  setInterval(tocbot.refresh(), 2000);
 });
