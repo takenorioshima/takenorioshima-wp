@@ -29,7 +29,6 @@ add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
  * Enqueue our stylesheet and javascript file
  */
 function theme_enqueue_styles() {
-
 	// Get the theme data.
 	$the_theme = wp_get_theme();
 
