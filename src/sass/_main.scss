@@ -17,3 +17,40 @@ body {
   bottom: 0;
   width: 100vw;
 }
+
+.ffs-palt {
+  font-feature-settings: "palt";
+  letter-spacing: .1em;
+}
+
+.tile-article {
+  flex: 0 0 33.333%;
+  a {
+    display: block;
+  }
+}
+
+.tile-article-title {
+  font-size: $h5-font-size;
+}
+
+.tile-article:nth-of-type(1) {
+  flex: 0 0 100%;
+  a {
+    display: flex;
+    align-items: center;
+  }
+  .tile-article-thumbnail {
+    flex: 0 0 60%;
+  }
+  .tile-article-title {
+    font-size: $h3-font-size;
+  }
+}
+
+.tile-article:nth-of-type(n + 2):nth-of-type(-n + 3) {
+  flex: 0 0 50%;
+  .tile-article-title {
+    font-size: $h4-font-size;
+  }
+}

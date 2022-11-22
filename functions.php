@@ -9,6 +9,8 @@
 defined( 'ABSPATH' ) || exit;
 
 require 'inc/customizer.php';
+require 'inc/custom-queries.php';
+require 'inc/custom-template-tags.php';
 
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
