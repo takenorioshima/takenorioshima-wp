@@ -1,0 +1,77 @@
+.single-header{
+  min-height: 500px;
+  background-color: $primary;
+  background-blend-mode: multiply;
+}
+
+.entry-content h2 {
+  position: relative;
+  padding-bottom: $spacer * 1.5;
+  margin: $spacer * 2 0 $spacer * 1.5 0;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 4rem;
+    height: 4px;
+    content: "";
+    background: $primary;
+    border-radius: 2px;
+  }
+}
+
+.entry-content h3 {
+  padding-bottom: $spacer * .75;
+  margin: $spacer * 1.75 0 $spacer;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.entry-content h4 {
+  margin: $spacer * 1.5 0 $spacer;
+}
+
+.entry-content ul {
+  padding-left: $spacer;
+  margin-left: $spacer * .5;
+  & > li > ul {
+    padding: 0 0 0 $spacer;
+    margin: $spacer * .5 0 $spacer * 1 0;
+    list-style: none;
+    border-left: 4px solid $gray-200;
+  }
+}
+
+.entry-content .wp-block-image img {
+  @extend .img-fluid;
+  margin-bottom: 0;
+}
+
+.entry-content hr {
+  margin: $spacer * 1.5 0;
+  border-bottom: 0;
+}
+
+.entry-content .wp-block-quote,
+.entry-content .quote-voice {
+  padding: $spacer * 1.5;
+  margin: $spacer 0;
+  background: $gray-100;
+  border-left: 6px solid $teal-400;
+  border-radius: $border-radius;
+}
+
+.entry-content .wp-block-quote cite {
+  display: block;
+  margin-top: $spacer * .5;
+  @include font-size($blockquote-footer-font-size);
+  color: $blockquote-footer-color;
+  &::before {
+    content: "\2014\00A0"; // em dash, nbsp
+  }
+}
+
+.entry-content .wp-block-table table {
+  @extend .table;
+  @extend .table-bordered;
+}
+

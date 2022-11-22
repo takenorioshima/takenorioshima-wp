@@ -9,6 +9,8 @@
 defined( 'ABSPATH' ) || exit;
 
 require 'inc/customizer.php';
+require 'inc/custom-queries.php';
+require 'inc/custom-template-tags.php';
 
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
@@ -27,7 +29,6 @@ add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
  * Enqueue our stylesheet and javascript file
  */
 function theme_enqueue_styles() {
-
 	// Get the theme data.
 	$the_theme = wp_get_theme();
 
@@ -53,7 +54,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
  * Load the child theme's text domain
  */
 function add_child_theme_textdomain() {
-	load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
+	 load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
@@ -89,6 +90,6 @@ add_action( 'admin_init', 'understrap_wpdocs_theme_add_editor_styles' );
  * Enqueue admin css.
  */
 function understrap_admin_style() {
-	wp_enqueue_style( 'admin_style', get_stylesheet_directory_uri() . '/css/admin.css', array(), \false, 'all' );
+	 wp_enqueue_style( 'admin_style', get_stylesheet_directory_uri() . '/css/admin.css', array(), \false, 'all' );
 }
 add_action( 'admin_enqueue_scripts', 'understrap_admin_style' );

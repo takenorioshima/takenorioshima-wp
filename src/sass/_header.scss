@@ -1,0 +1,39 @@
+.global-navbar {
+  transition: .2s;
+}
+
+.global-navbar .nav-link,
+.navbar-site-description{
+  color: $white;
+}
+
+.global-navbar-logo {
+  width: 60px;
+}
+
+.global-navbar .logo-o{
+  fill: $white;
+  transition: .2s;
+}
+
+.global-navbar.is-scrolled {
+  background: $white;
+  .logo-o{
+    fill: $body-color;
+  }
+  .nav-link,
+  .navbar-site-description{
+    color: $body-color;
+  }
+}
+
+.global-navbar.is-front-page{
+  .logo-o{
+    fill: $body-color;
+  }
+  .nav-link,
+  .navbar-site-description{
+    color: $body-color;
+  }
+}
+

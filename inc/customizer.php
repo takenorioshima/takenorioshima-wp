@@ -34,7 +34,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		 * @param WP_Customize_Setting $setting Setting instance.
 		 * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
 		 */
-		function understrap_theme_slug_sanitize_select( $input, $setting ) {
+		function understrap_customize_sanitize_select( $input, $setting ) {
 
 			// Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
 			$input = sanitize_key( $input );
@@ -52,7 +52,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			array(
 				'default'           => 'container',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				'sanitize_callback' => 'understrap_customize_sanitize_select',
 				'capability'        => 'edit_theme_options',
 			)
 		);
@@ -104,7 +104,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'section'           => 'understrap_theme_layout_options',
 					'settings'          => 'understrap_navbar_type',
 					'type'              => 'select',
-					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'sanitize_callback' => 'understrap_customize_sanitize_select',
 					'choices'           => array(
 						'collapse'  => __( 'Collapse', 'understrap' ),
 						'offcanvas' => __( 'Offcanvas', 'understrap' ),
@@ -137,7 +137,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'section'           => 'understrap_theme_layout_options',
 					'settings'          => 'understrap_sidebar_position',
 					'type'              => 'select',
-					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'sanitize_callback' => 'understrap_customize_sanitize_select',
 					'choices'           => array(
 						'right' => __( 'Right sidebar', 'understrap' ),
 						'left'  => __( 'Left sidebar', 'understrap' ),
