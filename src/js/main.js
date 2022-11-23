@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     eadingSelector: "h2, h3",
     headingsOffset: 70,
     scrollSmoothOffset: -70,
-    scrollSmoothDuration: 100,
+    scrollSmoothDuration: 10,
   });
   setInterval(tocbot.refresh(), 2000);
 });
