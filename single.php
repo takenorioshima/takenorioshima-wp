@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="single-wrapper">
 
 	<header class="single-header d-flex align-items-center mb-5" style="<?php tk_the_background_thumbnail(); ?>">
-		<div class="<?php echo esc_attr( $container ); ?>">
+		<div class="<?php echo esc_attr( $container ); ?> px-md-4">
 			<?php the_title( '<h1 class="fs-1 text-white">', '</h1>' ); ?>
 			<div class="entry-meta text-white">
 				<i class="bi-clock"></i> <?php echo date( 'M d, Y', time() ); ?>
@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div>
 	</header>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php echo esc_attr( $container ); ?> px-md-4" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -42,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {
-						comments_template();
+						// comments_template();
 					}
 				}
 				?>

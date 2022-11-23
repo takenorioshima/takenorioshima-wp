@@ -15,4 +15,4 @@ if ( 'left' === $sidebar_pos || 'both' === $sidebar_pos ) {
 }
 ?>
 
-<div class="col-12 col-lg-9 content-area" id="primary">
+<div class="col-12 col-lg-9 content-area mb-5 mb-lg-0" id="primary">

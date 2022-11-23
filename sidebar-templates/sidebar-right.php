@@ -22,12 +22,12 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<div class="col-12 col-lg-3 widget-area" id="right-sidebar">
 <?php endif; ?>
 
-<div class="sidebar-profile">
+<div class="sidebar-profile border-top border-bottom mb-4 pt-4">
 	<div class="row align-items-center">
-		<div class="col-12 col-md-3 pe-md-0">
+		<div class="col-2 col-md-1 col-lg-3 pe-md-0">
 			<img src="//dummyimage.com/256x256.png" class="img-fluid rounded-pill">
 		</div>
-		<div class="col-12 col-md-9">
+		<div class="col-10 col-md-11 col-lg-9">
 			<h3 class="fs-4 mb-0">大島 武宜</h3>
 			<div class="fs-6">Takenori Oshima</div>
 		</div>
@@ -44,8 +44,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	</div>
 </div>
 
-<div class="sidebar-sticky">
-	<div class="sidebar-toc js-toc"></div>
+<div class="sidebar-sticky d-none d-lg-block">
+	<div class="sidebar-toc">
+		<div class="sidebar-toc-title small text-muted fw-bold">目次</div>
+		<div class="js-toc"></div>
+	</div>
 	<?php dynamic_sidebar( 'right-sidebar' ); ?>
 </div>
 

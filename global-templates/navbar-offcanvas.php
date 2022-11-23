@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</h2>
 
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="<?php echo esc_attr( $container ); ?> px-md-4">
 
 		<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">
 			<span class="global-navbar-logo d-inline-block"><?php tk_the_logo_svg(); ?></span>
@@ -26,13 +26,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</a>
 
 		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNavOffcanvas" aria-controls="navbarNavOffcanvas" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-			<span class="navbar-toggler-icon"></span>
+			<span class="bi-list"></span>
 		</button>
 
 		<div class="offcanvas offcanvas-end" tabindex="-1" id="navbarNavOffcanvas">
 
 			<div class="offcanvas-header justify-content-end">
-				<button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				<button type="button" class="btn btn-close-offcanvas text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+					<i class="bi-x-circle-fill"></i>
+				</button>
 			</div><!-- .offcancas-header -->
 
 			<!-- The WordPress Menu goes here -->
@@ -42,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					'theme_location'  => 'primary',
 					'container_class' => 'offcanvas-body',
 					'container_id'    => '',
-					'menu_class'      => 'navbar-nav justify-content-end flex-grow-1 pe-3',
+					'menu_class'      => 'navbar-nav flex-grow-1 pe-3',
 					'fallback_cb'     => '',
 					'menu_id'         => 'main-menu',
 					'depth'           => 2,

@@ -3,7 +3,8 @@
 }
 
 .global-navbar .nav-link,
-.navbar-site-description{
+.navbar-site-description,
+.global-navbar .navbar-toggler{
   color: $white;
 }
 
@@ -22,7 +23,8 @@
     fill: $body-color;
   }
   .nav-link,
-  .navbar-site-description{
+  .navbar-site-description,
+  .navbar-toggler {
     color: $body-color;
   }
 }
@@ -37,3 +39,31 @@
   }
 }
 
+.btn-close-offcanvas{
+  padding: 0 .2rem 0 0;
+  line-height: 1;
+  i{
+    font-size: 1.75rem;
+  }
+}
+
+.offcanvas{
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    @include media-breakpoint-up(md) {
+      justify-content: end;
+    }
+  }
+  .nav-link{
+    font-size: 1.25rem;
+    color: $dark;
+    @include media-breakpoint-up(md) {
+      justify-content: end;
+      font-size: var(--bs-nav-link-font-size);
+      color: $white;
+    }
+  }
+}
