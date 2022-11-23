@@ -33,7 +33,7 @@
 .entry-content ul {
   padding-left: $spacer;
   margin-left: $spacer * .5;
-  & > li > ul {
+  ul {
     padding: 0 0 0 $spacer;
     margin: $spacer * .5 0 $spacer * 1 0;
     list-style: none;

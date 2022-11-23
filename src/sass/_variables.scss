@@ -1,10 +1,11 @@
 // Override BootStrap variables.
 
 $primary: #ff5a6a;
+$cyan: #29abe2;
 
 $bootstrap-icons-font-dir: "../fonts";
 
-$text-muted: rgba(0, 0, 0, 0.5);
+$text-muted: rgba(0, 0, 0, .5);
 $dark: #000;
 $body-color: #343a40;
 
@@ -17,8 +18,8 @@ $line-height-base: 1.8;
 $line-height-sm: 1.3;
 $line-height-lg: 2;
 
-$rfs-base-value: 0.9375rem;
-$font-size-base: 0.9375rem;
+$rfs-base-value: .9375rem;
+$font-size-base: .9375rem;
 $h1-font-size: $font-size-base * 2;
 $h2-font-size: $font-size-base * 1.75;
 $h3-font-size: $font-size-base * 1.5;
@@ -28,15 +29,15 @@ $h6-font-size: $font-size-base;
 
 $blockquote-font-size: $font-size-base * 1.1;
 
-$headings-color: black;
+$headings-color: $dark;
 $headings-font-weight: 500;
 
-$btn-disabled-opacity: 0.9;
+$btn-disabled-opacity: .9;
 
-$border-radius-xl: 0.75rem;
+$border-radius-xl: .75rem;
 
-$badge-padding-y: 0.65em;
-$badge-padding-x: 0.65em;
+$badge-padding-y: .65em;
+$badge-padding-x: .65em;
 
 $global-header-height: 70px;
 $global-header-height-lg: 90px;
