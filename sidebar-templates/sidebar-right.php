@@ -22,19 +22,21 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<div class="col-12 col-lg-3 widget-area" id="right-sidebar">
 <?php endif; ?>
 
-<div class="sidebar-profile border-top border-bottom mb-4 pt-4">
-	<div class="row align-items-center">
-		<div class="col-2 col-md-1 col-lg-3 pe-md-0">
-			<img src="//dummyimage.com/256x256.png" class="img-fluid rounded-pill">
+<div class="sidebar-profile p-3 mb-4">
+	<div class="sidebar-profile-inner bg-white shadow rounded-3 p-3">
+		<div class="row align-items-center">
+			<div class="col-2 col-md-1 col-lg-3">
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), 128, '', '', array( 'class' => 'img-fluid rounded-pill shadow-sm' ) ); ?>
+			</div>
+			<div class="col-10 col-md-11 col-lg-9 lh-sm">
+				<h3 class="fs-5 mb-0"><?php the_author_meta( 'display_name' ); ?></h3>
+				<div class="fs-6 text-muted"><?php echo get_the_author_meta( 'first_name' ) . ' ' . get_the_author_meta( 'last_name' ); ?></div>
+			</div>
+			<div class="col-12 my-2">
+				<p class="small mb-0"><?php the_author_meta( 'description' ); ?></p>
+			</div>
+			<?php tk_the_social_links(); ?>
 		</div>
-		<div class="col-10 col-md-11 col-lg-9">
-			<h3 class="fs-4 mb-0">大島 武宜</h3>
-			<div class="fs-6">Takenori Oshima</div>
-		</div>
-		<div class="col-12 my-3">
-			<p class="small mb-0">ギタリスト・歌うたい・コンポーザ・プログラマ・デザイナー。ソフトウェアとハードウェアの狭間を際限なく行き来する自由工作員として奔走する傍ら、Senkawos／タとエ／大島武宜と働く機械などで演奏活動を行なっている。好きな猛禽類はフクロウ。</p>
-		</div>
-		<?php tk_the_social_links(); ?>
 	</div>
 </div>
 
