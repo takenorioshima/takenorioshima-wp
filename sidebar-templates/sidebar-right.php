@@ -39,10 +39,12 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 </div>
 
 <div class="sidebar-sticky d-none d-lg-block">
-	<div class="sidebar-toc">
-		<div class="sidebar-toc-title small text-muted fw-bold">目次</div>
-		<div class="js-toc"></div>
-	</div>
+	<?php if ( is_single() ) : ?>
+		<div class="sidebar-toc">
+			<div class="sidebar-toc-title small text-muted fw-bold">目次</div>
+			<div class="js-toc"></div>
+		</div>
+	<?php endif; ?>
 	<?php dynamic_sidebar( 'right-sidebar' ); ?>
 </div>
 
