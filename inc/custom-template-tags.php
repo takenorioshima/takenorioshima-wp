@@ -53,3 +53,28 @@ function tk_the_logo_svg() {
 EOL;
 	echo $xml;
 }
+
+
+/**
+ * Output social links
+ *
+ * @return string $html
+ */
+function tk_the_social_links() {
+	$links = array(
+		'twitter_url'  => get_the_author_meta( 'tk_twitter_url' ),
+		'facebook_url' => get_the_author_meta( 'tk_facebook_url' ),
+		'github_url'   => get_the_author_meta( 'tk_github_url' ),
+	);
+
+	if ( ! count( $links ) ) {
+		return;
+	}
+
+	$html  = '<div class="col-12 mb-3"><div class="d-flex justify-content-around">';
+	$html .= $links['twitter_url'] ? '<a href="' . $links['twitter_url'] . '" tagert="_blank" class="text-body"><i class="bi-twitter fs-3"></i></a>' : '';
+	$html .= $links['facebook_url'] ? '<a href="' . $links['facebook_url'] . '" tagert="_blank" class="text-body"><i class="bi-facebook fs-3"></i></a>' : '';
+	$html .= $links['github_url'] ? '<a href="' . $links['github_url'] . '" tagert="_blank" class="text-body"><i class="bi-github fs-3"></i></a>' : '';
+	$html .= '</div></div>';
+	echo wp_kses_post( $html );
+}

@@ -34,13 +34,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		<div class="col-12 my-3">
 			<p class="small mb-0">ギタリスト・歌うたい・コンポーザ・プログラマ・デザイナー。ソフトウェアとハードウェアの狭間を際限なく行き来する自由工作員として奔走する傍ら、Senkawos／タとエ／大島武宜と働く機械などで演奏活動を行なっている。好きな猛禽類はフクロウ。</p>
 		</div>
-		<div class="col-12 mb-3">
-			<div class="d-flex justify-content-around">
-				<i class="bi-twitter fs-3"></i>
-				<i class="bi-facebook fs-3"></i>
-				<i class="bi-github fs-3"></i>
-			</div>
-		</div>
+		<?php tk_the_social_links(); ?>
 	</div>
 </div>
 
