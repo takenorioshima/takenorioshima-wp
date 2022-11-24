@@ -14,7 +14,7 @@
     "build:css": "run-s css:*",
     "css:compile": "sass src/sass/index.scss:css/main.css src/sass/admin.scss:css/admin.css src/sass/editor.scss:css/editor.css --load-path=node_modules --style=compressed",
     "css:postcss": "postcss --use autoprefixer --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
-    "watch": "nodemon --watch src --ext scss,js --exec \"run-s build:*\""
+    "watch": "nodemon --watch src --ext scss,js --exec \"run-p build:*\""
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.6",
