@@ -95,3 +95,8 @@ function understrap_admin_style() {
 	 wp_enqueue_style( 'admin_style', get_stylesheet_directory_uri() . '/css/admin.css', array(), \false, 'all' );
 }
 add_action( 'admin_enqueue_scripts', 'understrap_admin_style' );
+
+/**
+ * Add 1200x630 thumbnail.
+ */
+add_image_size( 'eyecatch', 1200, 630, true );
