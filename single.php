@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<header class="single-header d-flex align-items-center mb-5" style="<?php tk_the_background_thumbnail(); ?>">
 		<div class="<?php echo esc_attr( $container ); ?> px-md-4">
-			<?php the_title( '<h1 class="fs-1 text-white">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="text-white">', '</h1>' ); ?>
 			<div class="entry-meta text-white">
 				<i class="bi-clock"></i> <?php echo date( 'M d, Y', time() ); ?>
 			</div>
