@@ -9,6 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 require 'inc/customizer.php';
+require 'inc/custom-filters.php';
 require 'inc/custom-queries.php';
 require 'inc/custom-template-tags.php';
 
@@ -43,7 +44,7 @@ function theme_enqueue_styles() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	if ( is_front_page() ) {
+	if ( is_front_page() or defined( 'HERO_UNIT' ) ) {
 		wp_enqueue_script( 'hero-unit-js', get_stylesheet_directory_uri() . '/js/hero-unit.js', array(), \false, true );
 	}
 }
