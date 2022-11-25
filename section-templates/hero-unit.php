@@ -18,4 +18,9 @@
 		</div>
 	</div>
 
+	<div class="hero-unit-scroll">
+		<small>Scroll</small>
+		<i class="bi-chevron-down"></i>
+	</div>
+
 </div><!-- #hero-unit -->
