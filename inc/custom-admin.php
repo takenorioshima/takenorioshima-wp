@@ -13,9 +13,10 @@
  */
 function tk_set_user_meta( $profiles ) {
 	$profiles = array(
-		'tk_twitter_url'  => 'Twiter URL',
-		'tk_facebook_url' => 'Facebook URL',
-		'tk_github_url'   => 'GitHub URL',
+		'tk_twitter_url'   => 'Twiter URL',
+		'tk_facebook_url'  => 'Facebook URL',
+		'tk_github_url'    => 'GitHub URL',
+		'tk_instagram_url' => 'Instagram URL',
 	);
 	return $profiles;
 }

@@ -62,9 +62,10 @@ EOL;
  */
 function tk_the_social_links() {
 	$links = array(
-		'twitter_url'  => get_the_author_meta( 'tk_twitter_url' ),
-		'facebook_url' => get_the_author_meta( 'tk_facebook_url' ),
-		'github_url'   => get_the_author_meta( 'tk_github_url' ),
+		'twitter_url'   => get_the_author_meta( 'tk_twitter_url' ),
+		'facebook_url'  => get_the_author_meta( 'tk_facebook_url' ),
+		'instagram_url' => get_the_author_meta( 'tk_instagram_url' ),
+		'github_url'    => get_the_author_meta( 'tk_github_url' ),
 	);
 
 	if ( ! count( $links ) ) {
@@ -72,9 +73,10 @@ function tk_the_social_links() {
 	}
 
 	$html  = '<div class="col-12"><div class="d-flex justify-content-around lh-sm">';
-	$html .= $links['twitter_url'] ? '<a href="' . $links['twitter_url'] . '" tagert="_blank" class="text-body"><i class="bi-twitter fs-4"></i></a>' : '';
-	$html .= $links['facebook_url'] ? '<a href="' . $links['facebook_url'] . '" tagert="_blank" class="text-body"><i class="bi-facebook fs-4"></i></a>' : '';
-	$html .= $links['github_url'] ? '<a href="' . $links['github_url'] . '" tagert="_blank" class="text-body"><i class="bi-github fs-4"></i></a>' : '';
+	$html .= $links['twitter_url'] ? '<a href="' . $links['twitter_url'] . '" target="_blank" class="text-body"><i class="bi-twitter fs-4"></i></a>' : '';
+	$html .= $links['facebook_url'] ? '<a href="' . $links['facebook_url'] . '" target="_blank" class="text-body"><i class="bi-facebook fs-4"></i></a>' : '';
+	$html .= $links['instagram_url'] ? '<a href="' . $links['instagram_url'] . '" target="_blank" class="text-body"><i class="bi-instagram fs-4"></i></a>' : '';
+	$html .= $links['github_url'] ? '<a href="' . $links['github_url'] . '" target="_blank" class="text-body"><i class="bi-github fs-4"></i></a>' : '';
 	$html .= '</div></div>';
 	echo wp_kses_post( $html );
 }
