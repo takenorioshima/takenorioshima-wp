@@ -11,7 +11,7 @@
     height: 100vh;
   }
 
-  #main-canvas {
+  canvas {
     position: absolute;
     top: 0;
     left: 0;
@@ -28,6 +28,64 @@
     height: 100%;
     content: "";
     background: rgb(255 180 180 / 30%);
+  }
+}
+
+.flip-titles-container {
+  font-size: 2.25rem;
+  writing-mode: vertical-lr;
+}
+
+.flip-titles {
+  position: relative;
+  perspective: 300px;
+  width: 100px;
+}
+
+.flip-title {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  padding: 1rem;
+  font-size: 2.25rem;
+  line-height: 1;
+  color: $white;
+  white-space: nowrap;
+  background: $dark;
+  border-radius: 0.25rem;
+  writing-mode: vertical-lr;
+  transform: translate(-50%, 0) rotateY(90deg);
+  backface-visibility: hidden;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+
+  &.active {
+    animation-name: flip-active;
+  }
+
+  &.inactive {
+    animation-name: flip-inactive;
+  }
+}
+
+@keyframes flip-active {
+  from {
+    transform: translate(-50%, 0) rotateY(90deg);
+  }
+
+  to {
+    transform: translate(-50%, 0) rotateY(0deg);
+  }
+}
+
+@keyframes flip-inactive {
+  from {
+    transform: translate(-50%, 0) rotateY(0deg);
+  }
+
+  to {
+    transform: translate(-50%, 0) rotateY(-90deg);
   }
 }
 

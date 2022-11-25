@@ -33,3 +33,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   setInterval(tocbot.refresh(), 2000);
 });
+
+// flip-titles
+document.addEventListener("DOMContentLoaded", () => {
+  const titles = document.querySelectorAll(".flip-titles > div");
+  let index = 0;
+  let index_inactive = 0;
+  setInterval(addActiveClass, 1000);
+  function addActiveClass() {
+    titles.forEach((element) => {
+      element.classList.remove("active", "inactive");
+    });
+    if (index === 0) {
+      index_inactive = titles.length - 1;
+    } else {
+      index_inactive = index - 1;
+    }
+    titles[index].classList.add("active");
+    titles[index_inactive].classList.add("inactive");
+    if (index < titles.length - 1) {
+      index++;
+    } else {
+      index = 0;
+    }
+  }
+});
