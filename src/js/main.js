@@ -14,6 +14,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// tocbot.js
 document.addEventListener("DOMContentLoaded", () => {
   const h2s = document.querySelectorAll(".entry-content h2");
   const h3s = document.querySelectorAll(".entry-content h3");
